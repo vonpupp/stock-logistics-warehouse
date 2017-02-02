@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 KMEE
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+    <record model="ir.ui.view" id="procurement_order_compute_all_form_view">
+        <field name="name">procurement.order.compute.all.form (in procurement_select_company)</field>
+        <field name="model">procurement.order.compute.all</field>
+        <field name="inherit_id" ref="procurement.view_compute_schedulers_wizard"/>
+        <field name="arch" type="xml">
+               <xpath expr="//p" position="after">
+			<field name="company_ids" widget="many2many_tags"/>
+               </xpath>
+      </field>
+    </record>
+</data>
+</openerp>
